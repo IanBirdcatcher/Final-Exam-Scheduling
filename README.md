@@ -1,3 +1,21 @@
+
+
+Problem Description: 
+As an administrative faculty member of a university, I need to be able to input a class schedule for a semester and get out the full final exam schedule for that semester.
+
+Solution Approach: 
+We approached this solution by using Prolog facts to represent the courses and their schedules, then by using the reasoning that students cannot be in courses that have conflicting schedules,
+we deduced that any courses that do have conflicting schedules can share a final exam date/time on finals week. Using these rules, we solved the problem of final exam scheduling for a University.
+
+Sample Query:
+assertz(course(CMSC-5753, 'Intelligent Systems', [tue], '6-9:30')).
+assertz(course(CMSC-5754, 'AI', [tue], '6-9:30')).
+
+schedule_all_exams([CMSC-5753, CMSC-5754]).
+
+list_all_final_exams.  % This will list the evaluated times for all of the final exams that were asserted as facts into dataset.
+
+More Robust Example:
 Steps to run code in SWI-Prolog:
 
 cd([directory_where_file_is_downloaded]).

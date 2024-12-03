@@ -4,6 +4,8 @@
 
 
 % facts
+:- dynamic course/4.
+
 % Computer Science (CS)
 course(cs101, 'Introduction to Computer Science', [mon, wed, fri], '09:00-10:00').
 course(cs102, 'Data Structures', [tue, thu], '10:30-12:00').
